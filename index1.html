@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="mx-auto" style="width: 1000px;">
+
+
+    <div class="container mt-5">
+        <!--Bài tập 1: Tìm số nguyên dương nhỏ nhất sao cho:
+        1 + 2 +...+ n > 10000  -->
+        <h3 class="font-weight-bold">Bài tập 1: Tìm số nguyên dương nhỏ nhất sao cho:
+            1 + 2 +...+ n > 10000</h3>
+        <div class="bt1">
+            <div class="text-center font-weight-bold">
+                <label class="form-label">Số nguyên dương nhỏ nhất với tổng của chúng > 10000</label>
+                <div class="col-auto mt-3">
+                    <button class="btn btn-primary" onclick="soNguyenDuongNhoNhat()">Kết Quả</button>
+                </div>
+                <input type="" class="form-control ketQuaBt1 mt-3"
+                    placeholder="Số nguyên dương nhỏ nhất với tổng của chúng > 10000" />
+            </div>
+
+        </div>
+        <!-- Bài tập 2: Viết chương trình nhập vào 2 số x,n tính tổng: 
+            S(n) = x + x^2 + x^3 + ... + x^n (sử dụng vòng lặp và hàm) -->
+        <h3 class="font-weight-bold mt-4">Bài tập 2: Viết chương trình nhập vào 2 số x,n tính tổng:
+            S(n) = x + x^2 + x^3 + ... + x^n </h3>
+        <div class="bt2 mt-4 ">
+            <div class="number-bt2 d-inline-flex">
+                <div class="col-auto">
+                    <label class="form-label font-weight-bold">Number x</label>
+                    <input type="number" class="form-control numberx-bt2" placeholder="Nhập number x" />
+                </div>
+                <div class="col-auto">
+                    <label class="form-label font-weight-bold">Number n</label>
+                    <input type="number" class="form-control numbern-bt2" placeholder="Nhập number n" />
+                </div>
+            </div>
+            <div class="col-auto mt-3">
+                <button class="btn btn-primary" onclick="tinhTong()">Submit</button>
+            </div>
+            <div class="mt-3 ml-3">
+                <label class="form-label font-weight-bold">Tổng</label>
+                <input type="text" class="form-control w-50 tong-bt2" placeholder="Tổng" />
+            </div>
+        </div>
+        <!-- Bài tập 3: Nhập vào n tính giai thừa 1 * 2 * ... n -->
+        <h3 class="font-weight-bold mt-4">Bài tập 3: Nhập vào n tính giai thừa</h3>
+        <div class="bt3">
+            <div class="col-auto">
+                <label class="form-label font-weight-bold">Nhập number n</label>
+                <input type="number" class="form-control numbern-bt3 w-50" placeholder="Nhập number n" />
+            </div>
+            <div class="col-auto mt-3">
+                <button class="btn btn-primary" onclick="giaiThua ()">Submit</button>
+            </div>
+            <div class="mt-3 ml-3">
+                <label class="form-label font-weight-bold">giai thừa của n</label>
+                <input type="text" class="form-control w-50 giaiThua-bt3" placeholder="giai thừa của n" />
+            </div>
+        </div>
+        <!-- Viết chương trình khi click vào button sẽ in ra 10 thẻ div.
+             nếu div nào chẵn thì in ra background đỏ div lẻ in ra background xanh -->
+        <h3 class="font-weight-bold mt-4">Bài tập 4: Viết chương trình khi click vào button sẽ in ra 10 thẻ div.
+            nếu div nào chẵn thì in ra background đỏ div lẻ in ra background xanh</h3>
+        <button class="btn btn-primary mb-3" onclick="clickCreateDiv()">Click</button>
+        <div class="bt4 mb-4">
+        </div>
+        <!--Bài tập 5: Viết chương trình có một ô input, một button.
+            Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input -->
+        <h3 class="font-weight-bold mt-4">Bài tập 5: Viết chương trình có một ô input, một button.
+            Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input</h3>
+        <div class="bt5">
+            <div class="col-auto">
+                <label class="form-label font-weight-bold">Number</label>
+                <input type="number" class="form-control w-50 number-bt5" placeholder="Nhập number" />
+            </div>
+            <div class="col-auto mt-3">
+                <button class="btn btn-primary" onclick="checkSoNguyenTo()">Submit</button>
+            </div>
+            <div class="col-auto mt-3 mb-4">
+                <label class="form-label font-weight-bold">Các số nguyên tố</label>
+                <input type="" class="form-control ketQua-bt5" placeholder="Các số nguyên tố" />
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./js/baitap1.js"></script>
+    <script src="./js/baitap2.js"></script>
+    <script src="./js/baitap3.js"></script>
+    <script src="./js/baitap4.js"></script>
+    <script src="./js/baitap5.js"></script>
+
+
+
+</body>
+
+</html>
